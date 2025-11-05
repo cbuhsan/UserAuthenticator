@@ -1,79 +1,137 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+UserAuthenticator
 
-# Getting Started
+A React Native (TypeScript) mobile app providing user signup, login, session persistence, and logout using Context API + AsyncStorage, as required in the assessment.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+This app demonstrates:
 
-## Step 1: Start the Metro Server
+Authentication using React Context
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Signup & Login forms
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Input validation (email & password)
 
-```bash
-# using npm
+Show/Hide password feature
+
+Session persistence using AsyncStorage
+
+Logout functionality
+
+Navigation flows based on auth state
+
+Clean folder structure & reusable components
+
+🛠️ Tech Stack
+Library / Tool Purpose
+React Native 0.76.9 Framework
+node >=18
+React Navigation Screen navigation
+AsyncStorage Persisting auth data
+TypeScript Type safety
+Context API Global auth state
+ESLint + Prettier Code quality
+📂 Folder Structure
+src/
+├─ assets/ # Images etc./  
+├─ context/ # AuthContext for login/signup/logout/state
+├─ screens/ # Login, Signup, Home
+├─ components/ # Input and UI helpers
+├─ navigation/ # Root navigation stack
+├─ api/ # Mock storage (if needed)
+└─ App.tsx
+
+🚀 Features
+Feature Description
+✅ Signup Screen Enter name, email, password
+✅ Login Screen Email + password authentication
+✅ Form Validation Email format & password rules
+✅ Password Toggle Show/Hide password field
+✅ Error Messages Incorrect credentials / Validation errors
+✅ AsyncStorage Persistence User remains logged in after app restart
+✅ Logout Clears session and redirects to Login
+✅ Clean UI Minimal, simple card-based layout
+✅ TypeScript Strong typing for navigation & context
+📦 Installation & Run
+1️⃣ Install dependencies
+npm install
+
+or
+
+yarn
+
+2️⃣ Start Metro
 npm start
 
-# OR using Yarn
-yarn start
-```
+3️⃣ Run on device / emulator
 
-## Step 2: Start your Application
+For Android:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
 npm run android
 
-# OR using Yarn
-yarn android
-```
+For iOS:
 
-### For iOS
+npm run ios / open ios/UserAuthenticator.xcworkspace via xcode to run on simulator
 
-```bash
-# using npm
-npm run ios
+✅ How It Works
 
-# OR using Yarn
-yarn ios
-```
+Authentication is handled via Context + AsyncStorage:
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+signup() stores new user credentials in AsyncStorage
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+login() verifies credentials and stores active session
 
-## Step 3: Modifying your App
+logout() clears session storage
 
-Now that you have successfully run the app, let's modify it.
+App auto-checks session on launch to show correct screen
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Navigation automatically updates based on user state.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+🔐 Security Note (for Reviewer)!
 
-## Congratulations! :tada:
+This demo intentionally uses AsyncStorage for mock auth storage as required in the assessment.
 
-You've successfully run and modified your React Native App. :partying_face:
+In production, credentials should be hashed securely & verified via backend API.
 
-### Now what?
+📸 Demo Flow
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+✅ Signup success → navigates to Home
 
-# Troubleshooting
+<p align="center">
+  <img src="./screenshots/signUpSuccess.gif" width="400" />
+  <img src="./screenshots/singupValidation.png" width="400" />
+</p>
+✅ Login success → navigates to Home
+<p align="center">
+  <img src="./screenshots/loginSuccess.gif" width="400" />
+</p>
+❌ Login wrong credentials → error message
+<p align="center">
+  <img src="./screenshots/loginValidation.png" width="400" />
+</p>
+✅ Logout → returns to Login
+<p align="center">
+  <img src="./screenshots/logout.gif" width="400" />
+</p>
+✅ App restart → stays logged in (storage persistence)
+<p align="center">
+  <img src="./screenshots/loginSessionRestart.gif" width="400" />
+</p>
+👨‍💻 Developer Info
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Project Name: UserAuthenticator
+Language: TypeScript
+React Native Version: 0.76.9
+Node Required: >= 18
 
-# Learn More
+🏁 Conclusion
 
-To learn more about React Native, take a look at the following resources:
+This project satisfies all assessment requirements:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+✔ Signup
+✔ Login
+✔ Logout
+✔ Persistent Auth
+✔ Error handling & validations
+✔ Password visibility toggle
+✔ Clean architecture
+✔ TypeScript typing
+✔ No backend — mock persistence as required
