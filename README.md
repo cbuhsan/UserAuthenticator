@@ -21,37 +21,37 @@ Navigation flows based on auth state
 Clean folder structure & reusable components
 
 🛠️ Tech Stack </br>
-Library / Tool Purpose
-React Native 0.76.9 Framework
-node >=18
-React Navigation Screen navigation
-AsyncStorage Persisting auth data
-TypeScript Type safety
-Context API Global auth state
-ESLint + Prettier Code quality
-📂 Folder Structure
-src/
-├─ assets/ # Images etc./  
-├─ context/ # AuthContext for login/signup/logout/state
-├─ screens/ # Login, Signup, Home
-├─ components/ # Input and UI helpers
-├─ navigation/ # Root navigation stack
-├─ api/ # Mock storage (if needed)
-└─ App.tsx
+Library / Tool Purpose </br>
+React Native 0.76.9 Framework </br>
+node >=18 </br>
+React Navigation Screen navigation </br>
+AsyncStorage Persisting auth data </br>
+TypeScript Type safety </br>
+Context API Global auth state </br>
+ESLint + Prettier Code quality </br>
+📂 Folder Structure </br>
+src/ </br>
+├─ assets/ # Images etc./   </br>
+├─ context/ # AuthContext for login/signup/logout/state </br>
+├─ screens/ # Login, Signup, Home </br>
+├─ components/ # Input and UI helpers </br>
+├─ navigation/ # Root navigation stack </br>
+├─ api/ # Mock storage (if needed) </br>
+└─ App.tsx </br>
 
-🚀 Features
-Feature Description
-✅ Signup Screen Enter name, email, password
-✅ Login Screen Email + password authentication
-✅ Form Validation Email format & password rules
-✅ Password Toggle Show/Hide password field
-✅ Error Messages Incorrect credentials / Validation errors
-✅ AsyncStorage Persistence User remains logged in after app restart
-✅ Logout Clears session and redirects to Login
-✅ Clean UI Minimal, simple card-based layout
-✅ TypeScript Strong typing for navigation & context
-📦 Installation & Run
-1️⃣ Install dependencies
+🚀 Features </br>
+Feature Description </br>
+✅ Signup Screen Enter name, email, password </br>
+✅ Login Screen Email + password authentication </br>
+✅ Form Validation Email format & password rules </br>
+✅ Password Toggle Show/Hide password field </br>
+✅ Error Messages Incorrect credentials / Validation errors </br>
+✅ AsyncStorage Persistence User remains logged in after app restart </br>
+✅ Logout Clears session and redirects to Login </br>
+✅ Clean UI Minimal, simple card-based layout </br>
+✅ TypeScript Strong typing for navigation & context </br>
+📦 Installation & Run </br>
+1️⃣ Install dependencies </br>
 npm install
 
 or
@@ -117,21 +117,21 @@ In production, credentials should be hashed securely & verified via backend API.
 </p>
 👨‍💻 Developer Info
 
-Project Name: UserAuthenticator
-Language: TypeScript
-React Native Version: 0.76.9
-Node Required: >= 18
+Project Name: UserAuthenticator </br>
+Language: TypeScript </br>
+React Native Version: 0.76.9 </br>
+Node Required: >= 18 </br>
 
 🏁 Conclusion
 
 This project satisfies all assessment requirements:
 
-✔ Signup
-✔ Login
-✔ Logout
-✔ Persistent Auth
-✔ Error handling & validations
-✔ Password visibility toggle
-✔ Clean architecture
-✔ TypeScript typing
-✔ No backend — mock persistence as required
+✔ Signup </br>
+✔ Login </br>
+✔ Logout </br>
+✔ Persistent Auth </br>
+✔ Error handling & validations </br>
+✔ Password visibility toggle </br>
+✔ Clean architecture </br>
+✔ TypeScript typing </br>
+✔ No backend — mock persistence as required </br>
