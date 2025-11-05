@@ -21,6 +21,7 @@ Navigation flows based on auth state
 Clean folder structure & reusable components
 
 🛠️ Tech Stack </br>
+
 Library / Tool Purpose </br>
 React Native 0.76.9 Framework </br>
 node >=18 </br>
@@ -29,7 +30,9 @@ AsyncStorage Persisting auth data </br>
 TypeScript Type safety </br>
 Context API Global auth state </br>
 ESLint + Prettier Code quality </br>
+
 📂 Folder Structure </br>
+
 src/ </br>
 ├─ assets/ # Images etc./   </br>
 ├─ context/ # AuthContext for login/signup/logout/state </br>
@@ -40,6 +43,7 @@ src/ </br>
 └─ App.tsx </br>
 
 🚀 Features </br>
+
 Feature Description </br>
 ✅ Signup Screen Enter name, email, password </br>
 ✅ Login Screen Email + password authentication </br>
@@ -50,13 +54,11 @@ Feature Description </br>
 ✅ Logout Clears session and redirects to Login </br>
 ✅ Clean UI Minimal, simple card-based layout </br>
 ✅ TypeScript Strong typing for navigation & context </br>
+
 📦 Installation & Run </br>
+
 1️⃣ Install dependencies </br>
 npm install
-
-or
-
-yarn
 
 2️⃣ Start Metro
 npm start
@@ -69,7 +71,7 @@ npm run android
 
 For iOS:
 
-npm run ios / open ios/UserAuthenticator.xcworkspace via xcode to run on simulator
+npm run ios / open [ios/UserAuthenticator.xcworkspace] via xcode to run on simulator
 
 ✅ How It Works
 
@@ -115,6 +117,7 @@ In production, credentials should be hashed securely & verified via backend API.
 <p align="center">
   <img src="./screenshots/loginSessionRestart.gif" width="400" />
 </p>
+
 👨‍💻 Developer Info
 
 Project Name: UserAuthenticator </br>
