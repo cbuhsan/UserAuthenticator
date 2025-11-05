@@ -20,7 +20,7 @@ Navigation flows based on auth state
 
 Clean folder structure & reusable components
 
-🛠️ Tech Stack
+🛠️ Tech Stack </br>
 Library / Tool Purpose
 React Native 0.76.9 Framework
 node >=18
